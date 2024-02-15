@@ -1,68 +1,150 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --clr-black: #000000;
+  --clr-white: #FAFAFA;
+  --text1: #7D8184;
+  --secondary: #F5F5F5;
+  --text: #FAFAFA;
+  --textShade: rgba(250, 250,250, 0.7);
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+
+/* CSS RESET */
+  /* Box sizing rules */
+  *:not(i),
+  *::before:not(i),
+  *::after:not(i) {
+    box-sizing: border-box;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    font-family: "Roboto", sans-serif;
+  }
+  /* Remove default margin */
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  figure,
+  blockquote,
+  dl,
+  dd {
+    margin: 0;
+  }
+  
+  /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+  ul[role='list'],
+  ol[role='list'] {
+    list-style: none;
+  }
+  
+  /* Set core root defaults */
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
+  
+  html,
+  body {
+    height: 100%;
+  }
+  /* Set core body defaults */
+  body {
+    text-rendering: optimizeSpeed;
+  }
+  
+  /* A elements that don't have a class get default styles */
+  a:not([class]) {
+    text-decoration-skip-ink: auto;
+  }
+  
+  /* Make images easier to work with */
+  img,
+  picture,
+  svg {
+    max-width: 100%;
+    display: block;
+  }
+  
+  /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+  @media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+     scroll-behavior: auto;
+    }
+    
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+/* -----------UTILITIES------------ */
+
+
+/* FONT COLOR */
+.font-black {
+  color: var(--clr-black);
 }
 
-body {
-  margin: 0;
+.font-white {
+  color: var(--clr-white);
+}
+
+.font-text {
+  color: var(--text);
+}
+
+.text-shade {
+  color: var(--textShade);
+}
+
+/* BACKGROUND */
+.bg-black {
+  background-color: var(--clr-black);
+} 
+
+.bg-white {
+  background-color: var(--clr-white)
+}
+
+.bg-secondary {
+  background-color: var(--secondary);
+}
+
+/* FONTWEIGHT */
+
+.fw-b {
+  font-weight: bold;
+}
+
+/* FLEXBOX */
+
+.flex {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.gap1 {
+  gap: 1rem;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+label {
+  width: max-content;
+  padding: 0.2rem 0.5rem;
+}
+
+.fs-s {
+  font-size: 12px;
 }
