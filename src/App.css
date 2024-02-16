@@ -47,7 +47,7 @@ input {
 .footer-container {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 12rem;
+  margin-top: 7rem;
   padding: 5rem;
   gap: 2rem;
 }
@@ -65,4 +65,68 @@ input {
 
 img {
   width: max-content;
+}
+
+/* LOGIN */
+.login-container {
+  display: flex;
+  gap: 2rem;
+  width: 90%;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.login-form > div:not(:nth-child(1)) {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.login-button {
+  border: none;
+  padding: 1rem 3rem;
+  border-radius: 3px;
+}
+
+.login-input {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+  width: 100%;
+  padding: 0.5rem 0;
+}
+
+.form-container {
+  margin-top: 5rem;
+}
+
+.login-text {
+  align-items: start;
+  gap: 1rem;
+}
+
+/* OTHERS */
+
+label {
+  width: max-content;
+  padding: 0.5rem 1rem;
+}
+
+input:focus {
+  outline: none;
+}
+
+.signup-button-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-button-container button {
+  width: 100%;
 }

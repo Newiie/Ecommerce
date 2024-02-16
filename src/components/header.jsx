@@ -3,6 +3,7 @@ import Magnify from '../assets/magnify.png'
 import CartInactive from '../assets/cart-inactive.png'
 import UserInactive from '../assets/user-inactive.png'
 import WishList from '../assets/wishlist-inactive.png'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
 
@@ -18,7 +19,7 @@ const Header = () => {
             <li>Home</li>
             <li>Contact</li>
             <li>About</li>
-            <li>Sign up</li>
+            <li><Link to='/Signup'>Sign up</Link></li>
         </ul>
 
         <div className='flex-center gap1'>

@@ -5,6 +5,10 @@
   --secondary: #F5F5F5;
   --text: #FAFAFA;
   --textShade: rgba(250, 250,250, 0.7);
+  --button2: #DB4444;
+  --secondary2: #DB4444;
+  --LogSignHeader: 36px;
+
 }
 
 
@@ -105,6 +109,9 @@
   color: var(--textShade);
 }
 
+.secondary2 {
+  color: var(--secondary2);
+}
 /* BACKGROUND */
 .bg-black {
   background-color: var(--clr-black);
@@ -116,6 +123,16 @@
 
 .bg-secondary {
   background-color: var(--secondary);
+}
+
+.bg-button2 {
+  background-color: var(--button2);
+}
+
+/* FONTSIZE */
+
+.fs-ls {
+  font-size: var(--LogSignHeader);
 }
 
 /* FONTWEIGHT */
@@ -136,15 +153,30 @@
   align-items: center;
 }
 
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
 .gap1 {
   gap: 1rem;
 }
 
-label {
-  width: max-content;
-  padding: 0.2rem 0.5rem;
-}
 
 .fs-s {
   font-size: 12px;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Button */
+
+.border-black {
+  border: 2px solid rgba(0, 0,0, 0.5);
+}
+
+button:hover {
+  cursor: pointer;
 }
