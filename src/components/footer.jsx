@@ -19,20 +19,20 @@ const Footer = () => {
             </label>
         </div>
         <div className='font-text'>
-            <p>Support</p>
+            <p className='fs-header'>Support</p>
             <p>111 Bijoy sarani, Dhaka, <br/>DH 1515, Bangladesh.</p>
             <p>exclusive@gmail.com</p>
             <p>+88015-88888-9999</p>
         </div>
         <div className='font-text'>
-            <p>Quick Link</p>
+            <p className='fs-header'>Quick Link</p>
             <p>Privacy Policy</p>
             <p>Terms Of Use</p>
             <p>FAQ</p>
             <p>Contact</p>
         </div>
         <div className='font-text'>
-            <p>Download App</p>
+            <p className='fs-header'>Download App</p>
             <p className='fs-s text-shade'>Save $3 with App New User Only</p>
             <img src={QR} alt="" />
             <div className='flex gap1'>

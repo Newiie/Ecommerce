@@ -16,10 +16,10 @@ const Header = () => {
       <div className="header-nav | font-black">
         <img src={Logo} alt="Logo" />
         <ul>
-            <li>Home</li>
+            <li><Link className='font-black' to="/Home">Home</Link></li>
             <li>Contact</li>
             <li>About</li>
-            <li><Link to='/Signup'>Sign up</Link></li>
+            <li><Link className='font-black' to='/Signup'>Sign up</Link></li>
         </ul>
 
         <div className='flex-center gap1'>

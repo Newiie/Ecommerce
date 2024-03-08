@@ -1,5 +1,6 @@
 import LoginPicture from '../assets/loginPicture.png'
 import GoogleIcon from '../assets/google-icon.png'
+import { Link } from 'react-router-dom'
 
 const SignupComponent = () => {
   return (
@@ -20,7 +21,8 @@ const SignupComponent = () => {
                     <img src={GoogleIcon} alt="Google Icon" />
                     Sign up with Google
                     </button>
-                <a href="" className='secondary2'>Forget Password?</a>
+            
+                <p className='black7'>Already have an account? <Link to="/" className='black7 loginLink'>Log in</Link></p>
             </div>
         </form>
     </div>

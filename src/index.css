@@ -8,7 +8,6 @@
   --button2: #DB4444;
   --secondary2: #DB4444;
   --LogSignHeader: 36px;
-
 }
 
 
@@ -112,6 +111,10 @@
 .secondary2 {
   color: var(--secondary2);
 }
+
+.black7 {
+  color: rgba(0, 0, 0, 0.7)
+}
 /* BACKGROUND */
 .bg-black {
   background-color: var(--clr-black);
@@ -135,10 +138,22 @@
   font-size: var(--LogSignHeader);
 }
 
+.fs-20 {
+  font-size: 20px;
+}
+
+.fs-header {
+  font-size: 22px;
+}
+
 /* FONTWEIGHT */
 
 .fw-b {
   font-weight: bold;
+}
+
+.fw-m {
+  font-weight: 500;
 }
 
 /* FLEXBOX */
@@ -158,8 +173,24 @@
   flex-direction: column;
 }
 
+.space-between {
+  justify-content: space-between;
+}
+
 .gap1 {
   gap: 1rem;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.mt-3 {
+  margin-top: 3rem;
+}
+
+.mb-3 {
+  margin-bottom: 3rem;
 }
 
 
@@ -179,4 +210,9 @@ a {
 
 button:hover {
   cursor: pointer;
+}
+
+/* OTHERS */
+.relative {
+  position: relative;
 }
