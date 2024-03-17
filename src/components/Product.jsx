@@ -2,10 +2,17 @@ import Jacket from '../assets/jacket.png'
 import Heart from '../assets/heart.png'
 import Eye from '../assets/eye.png'
 import StarFilled from '../assets/star-filled.png'
+import { useNavigate } from 'react-router-dom'
 
 const Product = ({price, name, review, image}) => {
+  const navigate = useNavigate();
+
+  const handleOpenItem = () => {
+    navigate("/Item")
+  }
+  
   return (
-    <div className='product'>
+    <div className='product' onClick={handleOpenItem} >
       <div className="product-img relative">
         <img src={Jacket} alt="Product Image" />
         <img className='heart-ic' src={Heart} alt="Heart Icon" />
