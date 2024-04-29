@@ -3,10 +3,11 @@ import Magnify from '../assets/magnify.png'
 import CartInactive from '../assets/cart-inactive.png'
 import UserInactive from '../assets/user-inactive.png'
 import WishList from '../assets/wishlist-inactive.png'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+
 
 const Header = () => {
-
+  const navigate = useNavigate();
   return (
     <div id="header-container" className='font-white'>
       <div className="header-notif | bg-black">
@@ -28,7 +29,7 @@ const Header = () => {
             <img src={Magnify} alt="Magnify" />
           </div>
           <img src={WishList} alt="WishList" />
-          <img src={CartInactive} alt="CartInactive" />
+          <img src={CartInactive} onClick={() => navigate("/cart") } alt="CartInactive" />
           <img src={UserInactive} alt="UserInactive" />
         </div>
       </div>

@@ -20,13 +20,11 @@ const LoginComponent = () => {
                 <input className='login-input' type="password" placeholder="Password" />
                 <div>
                     <button type="submit" onClick={handleLogin} className="login-button bg-button2 font-white">Login</button>
-                    {/* <Link to={"/Home"} className="login-button bg-button2 font-white">Login</Link> */}
-                    <a href="" className='secondary2'>Forget Password?</a>
+                    <Link to={"/Home"} href="" className='secondary2'>Forget Password?</Link>
                 </div>
             </div>
         </div>
     </div>
-
   )
 }
 

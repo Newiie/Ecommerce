@@ -7,6 +7,7 @@ import Login from './pages/Login.jsx'
 import Signup from './pages/Signup.jsx'
 import Home from './pages/Home.jsx'
 import Item from './pages/Item.jsx'
+import Cart from './pages/Cart.jsx'
 import SellerDashboard from './pages/Seller/SellerDashboard.jsx';
 import AddProductDescription from './pages/Seller/AddProductDescription.jsx';
 import AddProductCategory from './pages/Seller/AddProductCategory.jsx';
@@ -33,24 +34,6 @@ const router = createBrowserRouter([
   {
     path: '/item',
     element: <Item />
-  },
-  {
-    path: '/add-product-description',
-    element: <AddProductDescription />
-  },
-  {
-    path: '/add-product-category',
-    element: <AddProductCategory />
-  }
-  ,
-  {
-    path: '/add-product-images',
-    element: <AddProductImages />
-  }
-  ,
-  {
-    path: '/add-product-payment-method',
-    element: <AddProductPaymentMethod />
   }
 ])
 
