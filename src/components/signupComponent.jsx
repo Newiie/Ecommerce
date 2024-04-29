@@ -22,7 +22,7 @@ const SignupComponent = () => {
                     Sign up with Google
                     </button>
             
-                <p className='black7'>Already have an account? <Link to="/" className='black7 loginLink'>Log in</Link></p>
+                <p className='black7'>Already have an account? <Link to="/login" className='black7 loginLink'>Log in</Link></p>
             </div>
         </form>
     </div>

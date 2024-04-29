@@ -17,23 +17,31 @@ import AddProductPaymentMethod from './pages/Seller/AddProductPaymentMethod.jsx'
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <SellerDashboard/>
+    element: <Home/>
   },
   {
     path: '/login',
     element: <Login/>
   },
   {
-    path: '/signup',
+    path: '/Signup',
     element: <Signup />
   },
   {
-    path: '/home',
+    path: '/Home',
     element: <Home />
   },
   {
-    path: '/item',
+    path: '/Item',
     element: <Item />
+  },
+  {
+    path: '/cart',
+    element: <Cart />
+  },
+  {
+    path: '/seller-dashboard',
+    element: <SellerDashboard />
   },
   {
     path: '/add-product-description',
