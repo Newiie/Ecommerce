@@ -4,11 +4,12 @@ import Eye from '../assets/eye.png'
 import StarFilled from '../assets/star-filled.png'
 import { useNavigate } from 'react-router-dom'
 
-const Product = ({price, name, review, image}) => {
+const Product = ({product}) => {
   const navigate = useNavigate();
 
   const handleOpenItem = () => {
-    navigate("/Item")
+    console.log("ID" + product.id)
+    navigate(`/item/${product.id}`)
   }
   
   return (
@@ -18,8 +19,8 @@ const Product = ({price, name, review, image}) => {
         <img className='heart-ic' src={Heart} alt="Heart Icon" />
         <img className='eye-ic' src={Eye} alt="Eye Icon" />
       </div>
-      <p className='fs-20'>The north coat</p>
-      <p className='secondary2 fs-20 fw-m'>$260</p>
+      <p className='fs-20'>{product.name}</p>
+      <p className='secondary2 fs-20 fw-m'>${product.price}</p>
       <div className='product-review'>
         <img src={StarFilled} alt="" />
         <img src={StarFilled} alt="" />

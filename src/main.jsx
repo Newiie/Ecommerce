@@ -11,19 +11,19 @@ import Cart from './pages/Cart.jsx'
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/login',
     element: <Login/>
   },
   {
-    path: '/Signup',
+    path: '/signup',
     element: <Signup />
   },
   {
-    path: '/Home',
+    path: '/',
     element: <Home />
   },
   {
-    path: '/Item',
+    path: '/item/:id',
     element: <Item />
   },
   {

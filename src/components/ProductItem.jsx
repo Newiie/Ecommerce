@@ -5,7 +5,7 @@ import Heart from '../assets/heart.png'
 import '../stylesFolder/ItemStyle.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-const ProductItem = () => {
+const ProductItem = ({product}) => {
     const [order, setOrder] = useState(0)
     const sizes = ["XS", "S", "M", "L", "XL"]
     const [sizeIndex, setSizeIndex] = useState(0)
@@ -13,7 +13,7 @@ const ProductItem = () => {
     <div className='item-content'>
       <img src={Jacket} alt="" />
       <div className="item-information-container">
-        <p className=' fw-b fs-header'>Havic HV G-92 Gamepad</p>
+        <p className=' fw-b fs-header'>{product.name || "ASD"}</p>
         <div className="item-review-container">
             <div className="review-star-container flex">
                 <img src={StarFilled} alt="" />
@@ -23,7 +23,7 @@ const ProductItem = () => {
                 <img src={StarFilled} alt="" />
             </div>
         </div>
-        <p className='item-price fs-20'>$192.00</p>
+        <p className='item-price fs-20'>${product.price || "ASD"}</p>
         <p>PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive.</p>
         <hr />
         <div className="size-container flex gap1">
