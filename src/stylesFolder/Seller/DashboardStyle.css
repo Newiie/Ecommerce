@@ -1,0 +1,155 @@
+/* Main dashboard container */
+.seller-dashboard {
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  max-width: 1200px; /* Limit width to keep content centered */
+  margin: auto;
+}
+
+/* Separate sections with spacing */
+.exclusive-section, .products-section {
+  margin-bottom: 40px;
+}
+
+/* Title styles for each section */
+.exclusive-section h2, .products-section h2 {
+  margin-bottom: 20px;
+  color: #333; /* Dark gray for better readability */
+}
+
+/* Box to add a new product, visually distinctive with dashed border */
+.add-product-box {
+  border: 2px dashed #ccc;
+  height: 150px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0; /* Vertical margin to separate it from other elements */
+  cursor: pointer; /* Pointer cursor for clickable interaction */
+}
+
+/* Style the plus icon inside the add product box */
+.add-product-box img {
+  max-width: 50px; 
+  max-height: 50px;
+  transition: transform 0.3s ease-in-out; /* Transition for scale effect */
+}
+
+.add-product-box img:hover {
+  transform: scale(1.1); /* Scale up on hover */
+}
+
+/* Header section for products with alignment */
+.products-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Button to see all products */
+.see-all-button {
+  background-color: #ffffff;
+  color: #000000; 
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold; /* Bold text for emphasis */
+}
+
+/* Grid layout for displaying product boxes */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3-column grid */
+  grid-gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* Style for individual product boxes */
+.product-box {
+  border: 1px solid #ccc;
+  height: 200px; 
+  background-color: #fff; /* White background to stand out */
+}
+
+/* Body style reset */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Red vertical line for section headers */
+.red-indicator {
+  width: 15px; 
+  height: 35px;
+  margin-right: 10px;
+  margin-bottom: 15px;
+}
+
+/* Align elements in exclusive section */
+.exclusive-section {
+display: flex;
+justify-content: left; 
+margin-top: 40px; 
+}
+
+/* Align the section title and indicator */
+.product-header-indicator {
+display: flex;
+align-items: center;
+}
+
+/* Styles for product description form */
+.add-product-description {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+/* Heading for the description form */
+.add-product-description h2 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Grouping form controls */
+.add-product-description .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Label styles for form fields */
+.add-product-description .form-group label {
+  margin: 0.5rem 0;
+}
+
+/* Inputs and textarea styles in form */
+.add-product-description .form-group input,
+.add-product-description .form-group textarea {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Submit button for form */
+.add-product-description .form-group .next-button {
+  padding: 0.5rem 1rem;
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Button hover state for better UX */
+.add-product-description .form-group .next-button:hover {
+  background-color: #c9302c;
+}

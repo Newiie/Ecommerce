@@ -8,8 +8,17 @@ import Signup from './pages/Signup.jsx'
 import Home from './pages/Home.jsx'
 import Item from './pages/Item.jsx'
 import Cart from './pages/Cart.jsx'
+import SellerDashboard from './pages/Seller/SellerDashboard.jsx';
+import AddProductDescription from './pages/Seller/AddProductDescription.jsx';
+import AddProductCategory from './pages/Seller/AddProductCategory.jsx';
+import AddProductImages from './pages/Seller/AddProductImages.jsx';
+import AddProductPaymentMethod from './pages/Seller/AddProductPaymentMethod.jsx';
 
 const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Home/>
+  },
   {
     path: '/login',
     element: <Login/>
@@ -29,6 +38,29 @@ const router = createBrowserRouter([
   {
     path: '/cart',
     element: <Cart />
+  },
+  {
+    path: '/seller-dashboard',
+    element: <SellerDashboard />
+  },
+  {
+    path: '/add-product-description',
+    element: <AddProductDescription />
+  }
+  ,
+  {
+    path: '/add-product-category',
+    element: <AddProductCategory />
+  }
+  ,
+  {
+    path: '/add-product-images',
+    element: <AddProductImages />
+  }
+  ,
+  {
+    path: '/add-product-payment-method',
+    element: <AddProductPaymentMethod />
   }
 ])
 
