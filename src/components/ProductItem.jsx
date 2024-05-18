@@ -4,8 +4,10 @@ import StarFilled from '../assets/star-filled.png'
 import Heart from '../assets/heart.png'
 import '../stylesFolder/ItemStyle.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useNavigate } from 'react-router-dom'
 
 const ProductItem = ({product}) => {
+    const navigate = useNavigate();
     const [order, setOrder] = useState(0)
     const sizes = ["XS", "S", "M", "L", "XL"]
     const [sizeIndex, setSizeIndex] = useState(0)
@@ -44,7 +46,9 @@ const ProductItem = ({product}) => {
                     +
                 </div>
             </div>
-            <div className="item-button">Buy Now</div>
+            <div onClick={() => {
+                navigate("/cart")
+            }} className="item-button">Buy Now</div>
             <FontAwesomeIcon icon="fa-regular fa-heart" />
             <img className="button-item" src={Heart} alt="" />
         </div>

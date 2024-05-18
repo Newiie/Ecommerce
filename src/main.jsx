@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
 import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Login from './pages/Login.jsx'
@@ -13,6 +12,7 @@ import AddProductDescription from './pages/Seller/AddProductDescription.jsx';
 import AddProductCategory from './pages/Seller/AddProductCategory.jsx';
 import AddProductImages from './pages/Seller/AddProductImages.jsx';
 import AddProductPaymentMethod from './pages/Seller/AddProductPaymentMethod.jsx';
+import NotFound from './pages/NotFound.jsx'
 
 const router = createBrowserRouter([
   {
@@ -24,15 +24,15 @@ const router = createBrowserRouter([
     element: <Login/>
   },
   {
-    path: '/signup',
+    path: '/Signup',
     element: <Signup />
   },
   {
-    path: '/',
+    path: '/Home',
     element: <Home />
   },
   {
-    path: '/item/:id',
+    path: '/Item',
     element: <Item />
   },
   {
@@ -61,6 +61,10 @@ const router = createBrowserRouter([
   {
     path: '/add-product-payment-method',
     element: <AddProductPaymentMethod />
+  },
+  {
+    path: '/*',
+    element: <NotFound />
   }
 ])
 

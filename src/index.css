@@ -98,7 +98,7 @@
 
 .font-white {
   color: var(--clr-white);
-}
+} 
 
 .font-text {
   color: var(--text);
@@ -131,6 +131,7 @@
 .bg-button2 {
   background-color: var(--button2);
 }
+
 
 /* FONTSIZE */
 
