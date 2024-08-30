@@ -1,0 +1,122 @@
+#about-container h1{
+    color: black;
+    font-size: 40px;
+    margin-left: 40px;
+    margin-top: 150px;
+    padding: 40px;
+}
+#about-container p{
+    color: black;
+    margin-left: 40px;
+    padding: 20px;
+    margin-top: 0px;
+    font-size: 20px;
+    
+}
+
+#pic img{
+    width: 705px;
+    height: 609px;
+    float: right;
+    margin-top: -500px;
+}
+.grid-container{
+    display:flex;
+    margin-top: 200px;
+}
+.grid-item {
+    margin-left: 50px;
+    margin-right: 40px;
+    height: 280px;
+    width: 300px;
+    box-sizing: border-box; 
+    border: 1px solid black;
+}
+.grid-item:nth-child(2) {
+    background-color: #ff0000; 
+}
+.grid-item img{
+    width: 80px;
+    height: 80px;
+    margin-left: 100px;
+    margin-top: 20px;
+}
+.grid-item h3{
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 80px;
+}
+
+.grid-item p{
+    /* padding: 0px !important;
+    margin: 5px !important; */
+    font-size: 15px !important;
+}
+.grid-container2{
+    display:flex;
+    margin-top: 200px;
+    margin-left: 100px;
+    margin-top: 100px;
+}
+.grid-item2{
+    margin-left: 50px;
+    margin-right: 80px;
+    height: 380px;
+    width: 300px;
+    box-sizing: border-box; 
+}
+.grid-item2 h4{
+    color: black;
+    font-size: 25px;
+    font-weight: light;
+    margin-left: 0px;
+    margin-top:10px;
+}
+.grid-item2 h5{
+    color: black;
+    font-size: 15px;
+    font-weight: light;
+    margin-left: 0px;
+    margin-top:10px;
+}
+.images img{
+    width:20px;
+    height: 20px;
+    padding: 3px;
+}
+.images{
+    display: flex;
+    margin-top:10px;
+}
+.grid-container3{
+    display:flex;
+    margin-top: 200px;
+    margin-left: 150px;
+}
+.grid-item3 {
+    margin-left: 0px;
+    margin-right: 100px;
+    height: 280px;
+    width: 500px;
+    box-sizing: border-box; 
+}
+.grid-item3 img{
+    width: 80px;
+    height: 80px;
+    margin-left: 130px;
+    margin-top: 20px;
+}
+.grid-item3 h3{
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.grid-item3 p{
+    /* padding: 0px !important;
+    margin: 5px !important; */
+    font-size: 15px !important;
+}

@@ -1,0 +1,75 @@
+.sidebar{
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    width: 340px;
+    height: 500px;
+    margin-left: 50px;
+    margin-top: 100px;
+}
+.sidebar h3{
+    color: black;
+    font-weight: bold;
+    margin-left: 80px;
+    margin-top: -30px;
+}
+.sidebar p{
+    color: black;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.sidebar img{
+    width: 50px;
+    height: 50px;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+.sidebar1{
+    margin-top: 100px;
+}
+.sidebar2{
+    margin-top: 100px;
+}
+.line {
+    border-top: 1px solid black;
+    margin: 10px 0;
+    margin-top: 50px;
+    margin-bottom: -40px;
+}
+
+.container {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    height: 500px;
+    width: 1000px; /* Adjust the width as needed */
+    float: right;
+    margin-right: 30px;
+    margin-top: -500px; /* Float the container to the left */
+}
+.container input{
+    width: 300px;
+    height: 50px;
+    background-color: #EDEDED;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+.container::placeholder {
+    margin-left: 10px;
+}
+.container textarea{
+    width: 940px;
+    height: 280px;
+    background-color: #EDEDED;
+    margin-top: 30px;
+    margin-left: 20px;
+    border: transparent;
+}
+.container button{
+    float: right;
+    margin-right: 50px;
+    width: 200px;
+    height: 50px;
+    border: transparent;
+    background-color: #DB4444;
+    color: white;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+

@@ -1,8 +1,17 @@
 import Header from '../components/header'
 import Footer from '../components/footer'
 import NotFoundBody from '../components/NotFoundBody'
+import { useNavigate } from 'react-router-dom';
+import { useApp } from '../hooks/AppProvider';
+import { useEffect } from 'react';
 
 const NotFound = () => {
+  const navigate = useNavigate();
+  const { userId } = useApp();
+  
+  useEffect(() => {
+    if (userId == "") navigate("/login")
+  },[])
   return (
     <div>
       <div>

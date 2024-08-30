@@ -2,8 +2,10 @@ import { Link, useNavigate } from 'react-router-dom'
 import LoginPicture from '../assets/loginPicture.png'
 import { useState } from 'react';
 import axios from 'axios';
+import { useApp } from '../hooks/AppProvider';
 
 const LoginComponent = () => {
+    const { SetUserId } = useApp();
     const navigate  = useNavigate();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -21,8 +23,8 @@ const LoginComponent = () => {
                     password
                 }
             });
-            console.log("HANDLE LOGIN", response);
-            
+            console.log("HANDLE LOGIN", response.data.userId);
+            SetUserId(response.data.userId)
             navigate("/");
         } catch (error) {
             navigate ("/login")
