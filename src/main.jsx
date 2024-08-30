@@ -7,6 +7,13 @@ import Signup from './pages/Signup.jsx'
 import Home from './pages/Home.jsx'
 import Item from './pages/Item.jsx'
 import Cart from './pages/Cart.jsx'
+<<<<<<<<< Temporary merge branch 1
+import SellerDashboard from './pages/Seller/SellerDashboard.jsx';
+import AddProductDescription from './pages/Seller/AddProductDescription.jsx';
+import AddProductCategory from './pages/Seller/AddProductCategory.jsx';
+import AddProductImages from './pages/Seller/AddProductImages.jsx';
+import AddProductPaymentMethod from './pages/Seller/AddProductPaymentMethod.jsx';
+=========
 import NotFound from './pages/NotFound.jsx'
 import ContextProvider from './hooks/AppProvider.jsx'
 import CheckOut from './pages/CheckOut.jsx'
@@ -58,6 +65,7 @@ const router = createBrowserRouter([
   {
     path: '*',
     element: <NotFound />
+>>>>>>>>> Temporary merge branch 2
   }
 ])
 
