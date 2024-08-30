@@ -8,12 +8,17 @@ import RightArrow from '../assets/rightArrow.png'
 import Product from "../components/Product"
 import axios from "axios"
 import { useEffect, useState } from "react"
+import { useApp } from "../hooks/AppProvider"
 
             
 const Home = () => {
   const [products, setProducts] = useState([])
-
   const navigate = useNavigate();
+  const { userId } = useApp();
+  useEffect(() => {
+    if (userId == "") navigate("/login")
+  },[])
+
   const handleHostEvent = async () => {
     try {
         const response = await axios({
@@ -40,7 +45,7 @@ const handleGetProducts = async () => {
       },
     })
     console.log("GET PRODUCTS ", response.data);
-    setProducts(response.data.products)
+    setProducts(response.data)
   } catch (error) {
     console.error("Error handling get products", error);
       // navigate("/home")
@@ -57,15 +62,15 @@ useEffect(() => {
       <Header />
       <div className="home-content">
         <div className="home-nav">
-            <Link className="font-black">Woman's Fashion</Link>
-            <Link className="font-black">Men's Fashion</Link>
-            <Link className="font-black">Electronics</Link>
-            <Link className="font-black">Home & Lifestyle</Link>
-            <Link className="font-black">Medicine</Link>
-            <Link className="font-black">Sports & Outdoor</Link>
-            <Link className="font-black">Baby's & Toys</Link>
-            <Link className="font-black">Groceries & Pets</Link>
-            <Link className="font-black">Health & Beauty</Link>
+            <Link to="#" className="font-black hover-underline ">Woman's Fashion</Link>
+            <Link to="#" className="font-black hover-underline ">Men's Fashion</Link>
+            <Link to="#" className="font-black hover-underline ">Electronics</Link>
+            <Link to="#" className="font-black hover-underline ">Home & Lifestyle</Link>
+            <Link to="#" className="font-black hover-underline ">Medicine</Link>
+            <Link to="#" className="font-black hover-underline ">Sports & Outdoor</Link>
+            <Link to="#" className="font-black hover-underline ">Baby's & Toys</Link>
+            <Link to="#" className="font-black hover-underline ">Groceries & Pets</Link>
+            <Link to="#" className="font-black hover-underline ">Health & Beauty</Link>
         </div>
         <img src={Voucher} alt="Voucher" className="home-voucher" />
       </div>
@@ -86,11 +91,15 @@ useEffect(() => {
             products.map(product => {
               console.log("Product " + product)
               return (
-                <Product key={product.id} product={product}  />
+                <Product key={product._id} product={product}  />
               )
             })
           }
-           
+           {products.length > 0 ? (
+              <Product product={products[0]} />
+            ) : (
+              <p>Loading...</p>
+            )}
         </div>
       <Footer />
     </div>

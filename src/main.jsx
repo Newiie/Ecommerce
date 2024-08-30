@@ -8,6 +8,12 @@ import Signup from './pages/Signup.jsx'
 import Home from './pages/Home.jsx'
 import Item from './pages/Item.jsx'
 import Cart from './pages/Cart.jsx'
+import NotFound from './pages/NotFound.jsx'
+import ContextProvider from './hooks/AppProvider.jsx'
+import CheckOut from './pages/CheckOut.jsx'
+import About from './pages/About.jsx'
+import Contact from './pages/Contact.jsx'
+import Account from './pages/Account.jsx'
 
 const router = createBrowserRouter([
   {
@@ -29,6 +35,26 @@ const router = createBrowserRouter([
   {
     path: '/cart',
     element: <Cart />
+  },
+  {
+    path: '/checkout',
+    element: <CheckOut />
+  },
+  {
+    path: '/about',
+    element: <About />
+  },
+  {
+    path: '/contact',
+    element: <Contact />
+  },
+  {
+    path: '/account',
+    element: <Account />
+  },
+  {
+    path: '*',
+    element: <NotFound />
   }
 ])
 
@@ -36,6 +62,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ContextProvider >
+      <RouterProvider router={router} />
+    </ContextProvider>
   </React.StrictMode>,
 )
