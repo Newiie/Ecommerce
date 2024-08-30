@@ -1,0 +1,175 @@
+/* Main container styling */
+.add-product-category-container {
+  max-width: 1000px; /* Limit width of the container */
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 8px; /* Rounded corners */
+}
+
+/* Step indicator styles */
+.product-header-indicator {
+  margin-bottom: 10px; /* Space below the step indicator */
+}
+
+/* Category heading style */
+.category-heading {
+  text-align: left; /* Align text to the left */
+  font-weight: bold; /* Bold text */
+  margin-top: 50px;
+  margin-bottom: 10px; /* Adjust vertical spacing */
+}
+
+.step-icon {
+  width: 40px; /* Adjust icon width */
+  height: 40px;
+}
+
+.dotted-line-icon {
+  height: 1px; /* Narrow height for the dotted line */
+  width: auto; /* Adjust to content width */
+}
+
+/* Form container with main and sub-categories */
+.form-container {
+  display: flex; /* Horizontal layout */
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.main-categories {
+  flex-basis: 20%; /* Allocate 20% space for main categories */
+  display: flex;
+  flex-direction: column;
+  margin-right: 80px;
+}
+
+.main-category-item {
+  width: 200px;
+  display: flex; /* Space between category name and arrow */
+  justify-content: space-between;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: left;
+  background-color: transparent; /* Default transparent background */
+  color: black;
+  border: 1px solid transparent; /* Prevents visual shifting */
+}
+
+.main-category-item.active {
+  background-color: #e0e0e0; /* Gray background when active */
+}
+
+.category-arrow {
+  margin-left: auto;
+  font-size: 18px; /* Adjust arrow size */
+}
+
+.sub-categories {
+  flex-basis: 80%; /* Allocate 80% space for sub-categories */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column {
+  margin-bottom: 0px; /* No additional space between sub-categories */
+}
+
+.column h3 {
+  margin-bottom: 10px; /* Space between sub-category heading and items */
+}
+
+/* Stack sub-category items vertically */
+.column label {
+  display: block; /* Ensures items stack vertically */
+  margin-bottom: -10px; /* Adjust space between items */
+  cursor: pointer;
+}
+
+/* Navigation buttons layout */
+.navigation-buttons {
+  display: flex; /* Center buttons */
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.back-button, .next-button {
+  background-color: #d32f2f; /* Red background */
+  color: #fff; /* White text */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px; /* Rounded corners */
+  transition: background-color 0.2s ease; /* Hover transition */
+}
+
+.back-button:hover, .next-button:hover {
+  background-color: #b71c1c; /* Darker red background on hover */
+}
+
+/* Selected categories layout */
+.selected-categories {
+  display: flex; /* Horizontal layout */
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 20px;
+  font-weight: bold;
+  text-align: left;
+  gap: 10px; /* Space between each selected category box */
+}
+
+.selected-categories-container {
+  display: flex;
+  flex-wrap: wrap; /* Wrap to the next line if needed */
+  gap: 10px;
+  min-height: 40px; /* Minimum height for the container */
+  align-items: center; /* Vertical alignment of items */
+}
+
+/* Individual selected category boxes */
+.selected-category-box {
+  display: flex;
+  align-items: center; /* Vertical alignment of content */
+  background-color: #000;
+  color: #fff;
+  border-radius: 6px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.remove-category {
+  margin-left: 5px;
+  font-size: 16px; /* Adjust to preferred size */
+  cursor: pointer; /* Makes clickable */
+}
+
+.remove-category:hover {
+  color: red; /* Changes color to red on hover */
+}
+
+/* Increase checkbox size */
+.large-checkbox {
+  width: 15px;
+  height: 15px;
+  transform: scale(1.5); /* Adjust size to your preference */
+  margin-right: 10px; /* Space between checkbox and label */
+  cursor: pointer;
+}
+
+.large-checkbox:checked {
+  appearance: none; /* Remove default styles */
+  background-color: #b71c1c; /* Red background when checked */
+  border: 2px solid #b71c1c; /* Ensure border matches */
+  border-radius: 3px; /* Rounded edges */
+  position: relative;
+}
+
+.large-checkbox:checked::before {
+  content: '✔'; /* Adds checkmark symbol */
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers checkmark */
+}
