@@ -8,6 +8,7 @@ import Signup from './pages/Signup.jsx'
 import Home from './pages/Home.jsx'
 import Item from './pages/Item.jsx'
 import Cart from './pages/Cart.jsx'
+
 import NotFound from './pages/NotFound.jsx'
 import ContextProvider from './hooks/AppProvider.jsx'
 import CheckOut from './pages/CheckOut.jsx'
@@ -16,6 +17,10 @@ import Contact from './pages/Contact.jsx'
 import Account from './pages/Account.jsx'
 
 const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Home/>
+  },
   {
     path: '/login',
     element: <Login/>
@@ -55,6 +60,7 @@ const router = createBrowserRouter([
   {
     path: '*',
     element: <NotFound />
+
   }
 ])
 
