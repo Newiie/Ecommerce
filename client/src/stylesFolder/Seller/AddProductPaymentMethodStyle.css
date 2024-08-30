@@ -1,0 +1,138 @@
+/* Main container styling */
+.add-product-payment-container {
+  max-width: 1000px; /* Limit width of the container */
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff; /* White background */
+  border-radius: 8px; /* Rounded corners */
+}
+
+/* Step indicator styles */
+.product-header-indicator {
+  margin-bottom: 10px; /* Space below step indicator */
+}
+
+.step-icon {
+  width: 40px; /* Adjust icon width */
+  height: 40px;
+}
+
+.dotted-line-icon {
+  height: 1px; /* Thin dotted line */
+  width: auto; /* Adjust to content width */
+}
+
+/* Layout for delivery and payment form sections */
+.form-sections {
+  display: flex; /* Wrap both sections horizontally */
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  margin-top: 50px;
+  gap: 30px; /* Space between sections */
+}
+
+.delivery-options-section, .payment-options-section {
+  flex: 1 1 48%; /* Allocate 48% of available width */
+}
+
+.delivery-options-section h2, .payment-options-section h2 {
+  font-weight: bold; /* Bold section headings */
+  margin-bottom: 10px;
+}
+
+.delivery-option, .payment-option {
+  display: flex; /* Align checkbox with text */
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 100%;
+  border-radius: 4px;
+  background: #f9f9f9; /* Light gray background */
+  cursor: pointer;
+}
+
+.delivery-option input[type='checkbox'], .payment-option input[type='checkbox'] {
+  transform: scale(1.5); /* Scale up checkbox size */
+  margin-right: 8px; /* Space between checkbox and label */
+}
+
+/* Shipping Time Section */
+.shipping-time-section {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.shipping-time-section h2 {
+  font-weight: bold; /* Bold section heading */
+  margin-bottom: 10px;
+}
+
+/* Shipping time table styles */
+.shipping-time-table {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space between rows */
+  padding: 0.5rem;
+  border-radius: 8px; /* Rounded corners */
+  border: 2px solid #e05252; /* Red border */
+}
+
+.shipping-time-instruction {
+  font-weight: normal;
+  text-align: left;
+  margin-bottom: 10px; /* Space below instruction text */
+}
+
+.shipping-time-title-row {
+  display: grid; /* Grid layout for headers */
+  grid-template-columns: 2fr 1fr 1fr; /* Set column widths */
+  gap: 10px; /* Space between columns */
+  text-align: center; /* Center align text */
+}
+
+.shipping-time-row {
+  display: grid; /* Grid layout for data */
+  grid-template-columns: 2fr 1fr 1fr; /* Set column widths */
+  align-items: center; /* Center align content */
+  gap: 10px; /* Space between columns */
+}
+
+.shipping-time-row span {
+  font-weight: bold; /* Bold label text */
+  text-align: left; /* Align text to the left */
+  margin-left: 150px; /* Adjust for proper alignment */
+}
+
+.shipping-time-row input {
+  width: 100%; /* Full-width input fields */
+  padding: 8px;
+  background: #e0e0e0; /* Light gray background */
+  border: none;
+  border-radius: 4px;
+  text-align: center; /* Center align input text */
+}
+
+/* Navigation buttons */
+.navigation-buttons {
+  display: flex; /* Center buttons horizontally */
+  justify-content: center;
+  margin-top: 9px;
+}
+
+.back-button, .post-button {
+  background-color: #d32f2f; /* Red background */
+  color: #fff; /* White text */
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 4px; /* Rounded corners */
+  transition: background-color 0.2s ease; /* Hover transition effect */
+}
+
+.back-button:hover, .post-button:hover {
+  background-color: #b71c1c; /* Darker red on hover */
+}

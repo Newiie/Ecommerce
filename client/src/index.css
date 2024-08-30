@@ -1,0 +1,293 @@
+:root {
+  --clr-black: #000000;
+  --clr-white: #FAFAFA;
+  --text1: #7D8184;
+  --secondary: #F5F5F5;
+  --text: #FAFAFA;
+  --textShade: rgba(250, 250,250, 0.7);
+  --button2: #DB4444;
+  --secondary2: #DB4444;
+  --LogSignHeader: 36px;
+}
+
+
+/* CSS RESET */
+  /* Box sizing rules */
+  *:not(i),
+  *::before:not(i),
+  *::after:not(i) {
+    box-sizing: border-box;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    font-family: "Roboto", sans-serif;
+  }
+  /* Remove default margin */
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  figure,
+  blockquote,
+  dl,
+  dd {
+    margin: 0;
+  }
+  
+  /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+  ul[role='list'],
+  ol[role='list'] {
+    list-style: none;
+  }
+  
+  /* Set core root defaults */
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
+  
+  html,
+  body {
+    height: 100%;
+  }
+  /* Set core body defaults */
+  body {
+    text-rendering: optimizeSpeed;
+  }
+  
+  /* A elements that don't have a class get default styles */
+  a:not([class]) {
+    text-decoration-skip-ink: auto;
+  }
+  
+  /* Make images easier to work with */
+  img,
+  picture,
+  svg {
+    max-width: 100%;
+    display: block;
+  }
+  
+  /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+  @media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+     scroll-behavior: auto;
+    }
+    
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+/* -----------UTILITIES------------ */
+
+
+/* FONT COLOR */
+.font-black {
+  color: var(--clr-black);
+}
+
+.font-white {
+  color: var(--clr-white);
+}
+
+.font-text {
+  color: var(--text);
+}
+
+.text-shade {
+  color: var(--textShade);
+}
+
+.secondary2 {
+  color: var(--secondary2);
+}
+
+.black7 {
+  color: rgba(0, 0, 0, 0.7)
+}
+/* BACKGROUND */
+.bg-black {
+  background-color: var(--clr-black);
+} 
+
+.bg-white {
+  background-color: var(--clr-white)
+}
+
+.bg-secondary {
+  background-color: var(--secondary);
+}
+
+.bg-button2 {
+  background-color: var(--button2);
+}
+
+/* FONTSIZE */
+
+.fs-ls {
+  font-size: var(--LogSignHeader);
+}
+
+.fs-20 {
+  font-size: 20px;
+}
+
+.fs-header {
+  font-size: 22px;
+}
+
+/* FONTWEIGHT */
+
+.fw-b {
+  font-weight: bold;
+}
+
+.fw-m {
+  font-weight: 500;
+}
+
+/* FLEXBOX */
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.gap1 {
+  gap: 1rem;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.mt-3 {
+  margin-top: 3rem;
+}
+
+.mb-3 {
+  margin-bottom: 3rem;
+}
+
+.mb-half {
+  margin-bottom: 0.5rem;
+}
+.fs-s {
+  font-size: 12px;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Button */
+
+.border-black {
+  border: 2px solid rgba(0, 0,0, 0.5);
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.hover {
+  cursor: pointer;
+}
+/* OTHERS */
+.relative {
+  position: relative;
+}
+
+.hover-underline {
+  padding-bottom: 0.5rem;
+  position: relative;
+  border-bottom: 1px solid white;
+  transition: border-color 0.3s ease, padding-bottom 0.3s ease; /* Add transitions for border-color and padding-bottom */
+}
+
+.hover-underline::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  top: 90%;
+  left: 50%; /* Start from the middle */
+  transform: translateX(-50%); /* Center the underline */
+  height: 2px;
+  transition: width 0.3s ease; /* Add transition for width */
+}
+
+.hover-underline:hover::before {
+  background-color: #000000;
+  width: 100%; /* Make the underline visible */
+}
+
+
+.lucide-icon:hover {
+  color: #DB4444;
+}
+
+.prod-img-ic {
+  background-color: white;
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+
+.product-img img {
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+.modal {
+  background-color: white;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: start;
+}
+
+.modal-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:#7d818434;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.relative {
+  position: relative;
+}
+
+.modal p {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
