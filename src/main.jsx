@@ -8,11 +8,13 @@ import Signup from './pages/Signup.jsx'
 import Home from './pages/Home.jsx'
 import Item from './pages/Item.jsx'
 import Cart from './pages/Cart.jsx'
-import SellerDashboard from './pages/Seller/SellerDashboard.jsx';
-import AddProductDescription from './pages/Seller/AddProductDescription.jsx';
-import AddProductCategory from './pages/Seller/AddProductCategory.jsx';
-import AddProductImages from './pages/Seller/AddProductImages.jsx';
-import AddProductPaymentMethod from './pages/Seller/AddProductPaymentMethod.jsx';
+
+import NotFound from './pages/NotFound.jsx'
+import ContextProvider from './hooks/AppProvider.jsx'
+import CheckOut from './pages/CheckOut.jsx'
+import About from './pages/About.jsx'
+import Contact from './pages/Contact.jsx'
+import Account from './pages/Account.jsx'
 
 const router = createBrowserRouter([
   {
@@ -40,27 +42,25 @@ const router = createBrowserRouter([
     element: <Cart />
   },
   {
-    path: '/seller-dashboard',
-    element: <SellerDashboard />
+    path: '/checkout',
+    element: <CheckOut />
   },
   {
-    path: '/add-product-description',
-    element: <AddProductDescription />
-  }
-  ,
+    path: '/about',
+    element: <About />
+  },
   {
-    path: '/add-product-category',
-    element: <AddProductCategory />
-  }
-  ,
+    path: '/contact',
+    element: <Contact />
+  },
   {
-    path: '/add-product-images',
-    element: <AddProductImages />
-  }
-  ,
+    path: '/account',
+    element: <Account />
+  },
   {
-    path: '/add-product-payment-method',
-    element: <AddProductPaymentMethod />
+    path: '*',
+    element: <NotFound />
+
   }
 ])
 
@@ -68,6 +68,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ContextProvider >
+      <RouterProvider router={router} />
+    </ContextProvider>
   </React.StrictMode>,
 )

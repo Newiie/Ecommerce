@@ -171,9 +171,9 @@ img {
 
 /* PRODUCT */
 
-.product {
+/* .product {
   width: max-content;
-}
+} */
 
 .heart-ic,
 .eye-ic {
@@ -207,9 +207,11 @@ img {
 
 .home-products-container {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr); /* 4 equal-width columns */
+  grid-auto-rows: auto; /* Automatic row height based on content */
   width: 80%;
   margin: 1.5rem auto;
+  column-gap: 1.5rem;
   row-gap: 1.5rem;
 }
 /* OTHERS */

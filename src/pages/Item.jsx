@@ -2,12 +2,20 @@ import axios from "axios";
 import ProductItem from "../components/ProductItem"
 import Footer from "../components/footer"
 import Header from "../components/header"
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useEffect, useState } from "react";
+import { useApp } from "../hooks/AppProvider";
 
 const Item = () => {
   let { id } = useParams();
   const [product, setProduct] = useState({})
+
+  const navigate = useNavigate();
+  const { userId } = useApp();
+  
+  useEffect(() => {
+    if (userId == "") navigate("/login")
+  },[])
 
   const handleGetItem = async () => {
     const response = await axios({
@@ -18,7 +26,7 @@ const Item = () => {
       },
     })
 
-    console.log("PROD ITEM " + response.data)
+    console.log("PROD ITEM ", response.data.product)
     setProduct(response.data.product)
   }
 
